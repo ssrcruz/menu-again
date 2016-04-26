@@ -5,9 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Prices</th>
-      <th>Names</th>
-      <th>Descriptions</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,8 +15,8 @@
   <tbody>
     <% @items.each do |item| %>
       <tr>
-        <td><%= item.prices %></td>
         <td><%= item.names %></td>
+        <td><%= item.prices %></td>
         <td><%= item.descriptions %></td>
         <td><%= link_to 'Show', item %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
