@@ -5,11 +5,13 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @categories = Category.all
+    # @category = Category.find_by(params[:item_id])
   end
 
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @category = Category.includes(:items).find(params[:id])
   end
 
   # GET /categories/new
